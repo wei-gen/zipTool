@@ -73,7 +73,6 @@
 </template>
 
 <script>
-import compress from '@/utils/zip'
 
 const dialog = require('electron').remote.dialog
 const fs = require("fs")
@@ -146,7 +145,6 @@ export default {
       fs.writeFile(this.dictorySelected + '\\config.json',JSON.stringify(config),'utf-8',(err,data) =>{
         if(err) throw err
         console.log("写入成功" + data)
-        compress(this.dictorySelected,"11111.zip","11111")
       })
       
     },
